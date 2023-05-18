@@ -1,16 +1,16 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import React,{useState}from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import {FaLinkedinIn} from "react-icons/fa"
+import { FaLinkedinIn } from "react-icons/fa"
 const Navbar = () => {
-    const [nav,setNav]=useState(false);
-    const handleNav=()=>{
+    const [nav, setNav] = useState(false);
+    const handleNav = () => {
         setNav(!nav);
     }
 
-    
+
     return (
         <div className="fixed w-full h-20 shadow-xl z-[100]">
             <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
@@ -32,9 +32,9 @@ const Navbar = () => {
             {/* div for side left view */}
             {/* intial code */}
             {/* <div className='fixed top-0 left-0 w-full h-full bg-black/70'> */}
-            <div className={nav ? 'fixed top-0 left-0 w-full h-full bg-black/70 md:hidden':''}>
-                <div className={nav ? 'fixed top-0 left-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500':
-            'fixed top-0 left-[-100%] p-10 ease-in duration-500'}>
+            <div className={nav ? 'fixed top-0 left-0 w-full h-full bg-black/70 md:hidden' : ''}>
+                <div className={nav ? 'fixed top-0 left-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' :
+                    'fixed top-0 left-[-100%] p-10 ease-in duration-500'}>
                     <div>
                         <div className='flex items-center justify-between'>
                             <h4>Logo</h4>
@@ -59,20 +59,20 @@ const Navbar = () => {
                             <p className='uppercase tracking-widset text-[#5651e5]'>Lets Connect here...</p>
                             <div className='flex items-center justify-between w-full my-4'>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                <FaLinkedinIn/>
+                                    <FaLinkedinIn />
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                <FaLinkedinIn/>
+                                    <FaLinkedinIn />
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                <FaLinkedinIn/>
+                                    <FaLinkedinIn />
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                <FaLinkedinIn/>
+                                    <FaLinkedinIn />
                                 </div>
 
 
-                                
+
                             </div>
                         </div>
                     </div>
