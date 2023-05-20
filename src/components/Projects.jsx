@@ -6,6 +6,7 @@ import im1 from "../public/assests/two.jpg"
 import im2 from "../public/assests/three.jpg"
 import im3 from "../public/assests/four.jpg";
 const Projects = () => {
+
     return (
         <div className="w-full lg:h-screen p-2">
             <div className="max-w-[1240px] mx-auto px-2">
