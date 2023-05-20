@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="fixed w-full h-20 shadow-xl z-[100]">
+        <div className="fixed top-0 left-0 right-0 bottom-0 w-full h-20 shadow-xl bg-[#ecf0f3] z-[100]">
             <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
                 {/* <img src="/./" alt="LogoIcon" width={100} height={100} /> */}
                 <h4>Logo</h4>
