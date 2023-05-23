@@ -6,7 +6,6 @@ import im1 from "../public/assests/two.jpg"
 import im2 from "../public/assests/three.jpg"
 import im3 from "../public/assests/four.jpg";
 const Projects = () => {
-
     return (
         <div className="w-full lg:h-screen p-2">
             <div className="max-w-[1240px] mx-auto px-2">
@@ -17,6 +16,7 @@ const Projects = () => {
                     <ProjectItem title="Crypto App" backgroundImg={im1} projectUrl={'/crypto'} />
                     <ProjectItem title="Nature1" backgroundImg={im2} projectUrl={'/nature1'} />
                     <ProjectItem title="Nature2" backgroundImg={im3} projectUrl={'/nature2'} />
+
                 </div>
             </div>
         </div >
