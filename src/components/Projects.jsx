@@ -7,7 +7,7 @@ import im2 from "../public/assests/three.jpg"
 import im3 from "../public/assests/four.jpg";
 const Projects = () => {
     return (
-        <div className="w-full lg:h-screen p-2">
+        <div id="projects" className="w-full lg:h-screen p-2">
             <div className="max-w-[1240px] mx-auto px-2">
                 <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
                 <h2>What i have Built</h2>

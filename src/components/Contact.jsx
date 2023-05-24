@@ -2,10 +2,12 @@ import React from 'react'
 import im from "../public/assests/one.jpg";
 import Image from 'next/image';
 import { AiOutlineInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { FiFacebook } from "react-icons/fi"
+import { FiFacebook } from "react-icons/fi";
+import {HiOutlineChevronDoubleUp} from "react-icons/hi";
+import Link from 'next/link';
 const Contact = () => {
     return (
-        <div className="mt-[450px] w-full lg:h-screen">
+        <div id="contact" className="mt-[450px] w-full lg:h-screen">
             <div className="max-w-[1240px]  m-auto px-2 py-16 w-full">
                 <p className="text-xl tracking-widest uppercase text-[#5651e5]">Contact</p>
                 <h2>Get in Touch</h2>
@@ -47,33 +49,42 @@ const Contact = () => {
                                 <div className='grid md:grid-cols-2 gap-4'>
                                     <div className='flex flex-col'>
                                         <label className='uppercase text-sm py-2'>Name</label>
-                                        <input className='rounded-lg p-3 flex border-2 boder-gray-300 ' type="text" />
+                                        <input className='rounded-lg p-3 flex border-2 border-gray-300 ' type="text" />
                                     </div>
                                     <div className='flex flex-col'>
                                         <label className='uppercase text-sm py-2'>Phone Number</label>
-                                        <input className='rounded-lg p-3 flex border-2 boder-gray-300 ' type="text" />
+                                        <input className='rounded-lg p-3 flex border-2 border-gray-300 ' type="text" />
                                     </div>
                                 </div>
                                 <div className='grid'>
                                     <div className='flex flex-col'>
                                         <label className='uppercase text-sm py-2'>Email</label>
-                                        <input className='rounded-lg p-3 flex border-2 boder-gray-300 ' type="email" />
+                                        <input className='rounded-lg p-3 flex border-2 border-gray-300 ' type="email" />
                                     </div>
                                 </div>
                                 <div className='grid'>
                                     <div className='flex flex-col'>
                                         <label className='uppercase text-sm py-2'>Subject</label>
-                                        <input className='rounded-lg p-3 flex border-2 boder-gray-300 ' type="text" />
+                                        <input className='rounded-lg p-3 flex border-2 border-gray-300 ' type="text" />
                                     </div>
                                 </div>
                                 <div className='grid'>
                                     <div className='flex flex-col'>
-                                        <label className='uppercase text-sm py-2'>Subject</label>
+                                        <label className='uppercase text-sm py-2'>Message</label>
+                                        <textarea className='border-2 border-gray-300 rounded-lg p-3' rows={10}></textarea>
                                     </div>
                                 </div>
+                                <button className='w-full py-4 rounded-lg mt-4 text-gray-100'>Send Message</button>
                             </form>
                         </div>
                     </div>
+                </div>
+                <div className='flex justify-center py-12'>
+                    <Link href="/">
+                        <div className='rounded-full shadow-lg shadow-gray-400 cursor-pointer p-3 hover:scale-105 ease-in duration-300'>
+                        <HiOutlineChevronDoubleUp size={30} className='text-[#5651e5]'/>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

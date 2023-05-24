@@ -1,28 +1,43 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa"
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const [shadow,setShadow]=useState(false)
     const handleNav = () => {
         setNav(!nav);
     }
 
+    useEffect(()=>{
+        const handleShadow=()=>{
+            if(window.screenY>=90){
+                setShadow(true);
+            }else{
+                setShadow(false)
+            }
+        }
+
+        window.addEventListener("scroll",handleShadow)
+    },[])
 
     return (
-        <div className="fixed top-0 left-0 right-0 bottom-0 w-full h-20 shadow-xl bg-[#ecf0f3] z-[100]">
+        <div className={shadow?"fixed w-full h-20 shadow-xl bg-[#ecf0f3] z-[100]":"fixed w-full h-20 bg-[#ecf0f3] z-[100]"}>
             <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
                 {/* <img src="/./" alt="LogoIcon" width={100} height={100} /> */}
+                <Link href="/">
                 <h4>Logo</h4>
+                </Link>
+               
                 {/* div for creating menu links */}
                 <div>
                     <ol className='hidden md:flex'>
                         <Link href="/"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">Home</li></Link>
-                        <Link href="/"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">About</li></Link>
-                        <Link href="/"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">Projects</li></Link>
-                        <Link href="/"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">Contact</li></Link>
+                        <Link href="/#about"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">About</li></Link>
+                        <Link href="/#projects"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">Projects</li></Link>
+                        <Link href="/#contact"><li className="ml-4 text-sm uppercase border-red-400 hover:border-b-4 ">Contact</li></Link>
                     </ol>
                     <div onClick={handleNav} className='md:hidden'>
                         <AiOutlineMenu size={25} />
